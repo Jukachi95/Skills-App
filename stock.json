@@ -1,0 +1,86 @@
+[
+
+{
+    "id": "Vue",
+    "course1": "VueJS 2 - The Complete Guide",
+    "course2": "Vue Official Documentation",
+    "course3": "VueJS FreeCodeCamp Tutorial",
+    "course4": "Build Web Apps with VueJS 2 & Firebase",
+    "course5": "VueJS Tutorial on Scrimba"
+    
+},
+
+
+{
+    "id": "javascript",
+    "course1": "Modern JavaScript From the Beginning (Udemy)",
+    "course2": "JavaScript.info",
+    "course3": "The Complete JavaScript Course 2019: Build Real Projects",
+    "course4": "FreeCodeCamp JavaScript Curriculum",
+    "course5": "Coding Train on YouTube",
+    "course6": "WesBos 30 for 30",
+    "course7": "MDN JavaScript Guide",
+    "course8": "ES6 Tutorial: Scrimba",
+    "course9": "You Don't Know JS Book Series",
+    "course10": "Eloquent JavaScript"
+    
+},
+
+
+{
+"id": "Python",
+"course1": "Python Crash Course",
+"course2": "Modern Python 3 Bootcamp",
+"course3": "Introduction to Python: Absolute Beginner [edx]",
+"course4": "Complete Python Bootcamp: Go From Hero to Zero in Python 3",
+"course5": "Python 3 Official Documentation",
+"course6": "Automate The Boring Stuff",
+"course7": "Cracking Codes with Python",
+"course8": "The Python Mega Course: Build 10 Real World Applications",
+"course9": "Quick Python Book",
+"course10": "Learn Python The Hard Way"
+
+},
+
+{
+    "id": "ReactJS",
+    "course1": "Modern React with Redux",
+    "course2": "React Official Documentation",
+    "course3": "React for Beginners (Wes Bos)",
+    "course4": "CodeAcademy - React 101",
+    "course5": "React 16 - The Complete Guide",
+    "course6": "The Beginners Guide to React - Kent C. Dodds/Egghead.io",
+    "course7": "The Complete React Developers Course - Andrew Mead (Udemy)"
+
+},
+
+{
+    "id": "NodeJS",
+    "course1": "NodeJS By Andrew Mead",
+    "course2": "Vue Official Documentation",
+    "course3": "VueJS FreeCodeCamp Tutorial",
+    "course4": "Build Web Apps with VueJS 2 & Firebase",
+    "course5": "VueJS Tutorial on Scrimba"
+},
+
+{
+    "id": "Project Management"
+},
+
+{
+    "id": "NodeJS"
+
+},
+
+{
+    "id": "Digital Marketing"
+}
+
+
+]
+
+   
+
+
+
+
