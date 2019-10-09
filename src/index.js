@@ -10,6 +10,8 @@ UserSearch.addEventListener("click", runSearch);
 // Function that runs on search
 function runSearch(){
 
+    
+
 
      const UserInput = document.getElementById("userSearchSkill").value;
        
@@ -27,6 +29,9 @@ function runSearch(){
                then(function(res){
                    return res.json();
                }).then(function(data){
+
+               loaderGif();
+
                    let jsData = data[1];
 
                    console.log(jsData);
@@ -52,6 +57,7 @@ function runSearch(){
 
                     document.querySelector('#render').innerHTML = output;
 
+                    
                    
                 //    })
                })
@@ -156,9 +162,14 @@ function runSearch(){
 
             })
 
+           } else if(UserInput === "project management" || UserInput === "Project management"){
+              
+            fetch('stock.json')
+
+
            } else if(UserInput.length < 2 && UserInput != "c"){
-               lowTextLength();
-           }
+            lowTextLength();
+        }
     
 
            
@@ -226,6 +237,19 @@ function runSearch(){
                 input.value = '';
             },4000)
            
+        }
+
+        function loaderGif(){
+
+            let gifImg = document.createElement('img');
+
+            gifImg.src = 'loading.gif';
+
+           let render = document.querySelector('#render');
+
+               render.appendChild(gifImg);
+           
+
         }
 
 
