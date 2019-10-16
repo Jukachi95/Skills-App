@@ -54,3 +54,23 @@
         givDiv.remove();
     },3000)
 
+// Initial loaderGif function
+
+
+  function loaderGif(){
+
+            let gifImg = document.createElement('img');
+
+            gifImg.src = 'loading.gif';
+
+           let render = document.querySelector('#render');
+
+               render.innerHTML = gifImg;
+       //    Was initially render.appendChild(gifImg)
+        //    setTimeout(function(){
+        //     render.innerHTML = gifImg;
+        //    }, 3000)
+
+        }
+
+        // Set timeout as a function in the initial js load with loadergif as a parameter

@@ -30,13 +30,12 @@ function gifLoad(){
 
 }
 
+// Add spinner to render box 
 
 // Function that runs on search
 function runSearch(){
 
     gifLoad();
-    
-
 
      const UserInput = document.getElementById("userSearchSkill").value;
        
@@ -79,11 +78,8 @@ function runSearch(){
                   </ol>
 
                   `
-
                     document.querySelector('#render').innerHTML = output;
 
-                    
-                   
                 //    })
                })
 
@@ -96,9 +92,7 @@ function runSearch(){
                     
                     let pyResources = pyData[2];
 
-                    
-
-                   let output = '';
+                      let output = '';
 
                         output+= `
                         <h4 class = "mb-4"> Top 10 Python Resources</h4> 
@@ -117,8 +111,6 @@ function runSearch(){
                         `;
 
                         document.querySelector('#render').innerHTML = output;
-                  
-
                 })
 
 
@@ -151,9 +143,7 @@ function runSearch(){
                     </ol>
                     `
                     document.querySelector('#render').innerHTML = output;
-                
-                }
-                 
+                } 
                  )
 
            } else if(UserInput === "Vue" || UserInput === "VUE" || UserInput === "VueJS" || UserInput === "vue" || UserInput === "vuejs" || UserInput === "vue js"){
@@ -165,8 +155,6 @@ function runSearch(){
 
                console.log(vue);
                 let output = '';
-
-               
 
                     output+=`
                     <h4 class="mb-4">Top 5 Vue Courses</h4>
@@ -183,8 +171,6 @@ function runSearch(){
                     document.querySelector('#render').innerHTML= output;
 
                     clearInput();
-
-
             })
 
            } else if(UserInput === "digital marketing" || UserInput === "Digital Marketing"){
@@ -207,47 +193,62 @@ function runSearch(){
                 <li>${dmData.course5}</li>
                 </ol>
                 `
-
                 document.querySelector("#render").innerHTML = output;
-            
             })
 
 
-           } else if(UserInput.length < 2 && UserInput != "c"){
+           } else if(UserInput === "Game dev" || UserInput === "game dev" || UserInput === "game development" ){
+            
+            fetch('stock.json').
+            then(res => res.json()).
+            then( 
+                gmd => {
+                    let gmdData = gmd[6];
+
+                    let output = '';
+
+                    output+= `
+                    <h1> Top Game Development Resources </h1>
+                    <ol>
+                    <li>${gmdData.course1}</li>
+                    <li>${gmdData.course2}</li>
+                    <li>${gmdData.course3}</li>
+                    <li>${gmdData.course4}</li>
+                    <li>${gmdData.course5}</li>
+                    </ol>
+                    `
+
+                    document.querySelector('#render').innerHTML = output
+                }
+             )
+
+        }  else if(UserInput.length < 2 && UserInput != "c"){
             lowTextLength();
         }
-    
-
-           
-           
-
-    
 
 }
 
-
         function displayErr(){
-
             // Create div that will hold data
-        let displayDiv = document.createElement("div");
+                 let displayDiv = document.createElement("div");
 
-        //    Add class of danger to displayDiv
+           //    Add class of danger to displayDiv
 
-            displayDiv.className = 'alert alert-danger';
+                   displayDiv.className = 'alert alert-danger';
 
-            // Append text
+          // Append text
 
-            displayDiv.appendChild(document.createTextNode('Please enter a skill. No numbers or special characters permitted'))  
+                   displayDiv.appendChild(document.createTextNode('Please enter a skill. No numbers or special characters permitted'))  
 
-            let mainContainer = document.querySelector('#mainContainer');
+                  let mainContainer = document.querySelector('#mainContainer');
 
-            let render = document.querySelector('#render');
+                  let render = document.querySelector('#render');
 
-            mainContainer.insertBefore(displayDiv, render);
+                 mainContainer.insertBefore(displayDiv, render);
 
-            setTimeout(function(){ 
-                document.querySelector('.alert').remove();
-            }, 4700);
+                setTimeout(function(){ 
+                    document.querySelector('.alert').remove();
+                }, 4700);
 
         }
 
@@ -285,22 +286,8 @@ function runSearch(){
            
         }
 
-        function loaderGif(){
+      
 
-            let gifImg = document.createElement('img');
-
-            gifImg.src = 'loading.gif';
-
-           let render = document.querySelector('#render');
-
-               render.innerHTML = gifImg;
-       //    Was initially render.appendChild(gifImg)
-        //    setTimeout(function(){
-        //     render.innerHTML = gifImg;
-        //    }, 3000)
-
-        }
-// Set timeout as a function in the initial js load with loadergif as a parameter
 
 // Things to add
 // // Add a loading animation
