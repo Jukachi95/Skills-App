@@ -1,0 +1,56 @@
+
+
+    {
+
+        "JavaScript": "JavaScript.Info, Modern JavaScript From the Beginning, FreeCodeCamp, r/webdev, r/learnjavascript",
+        "Python": "Automate the Boring Stuff, Python Programmer (YouTube Channel), r/learnpython, Python Mega Course (Udemy)",
+        "React": "React (Traversy Media Udemy), React Official Documentation, React The Complete Guide (Udemy), React Series by Net Ninja",
+        "Vue": "VUE, VUE BY TRAVERSY, VUE BY FREECODECAMP"
+    
+      
+    
+    }
+
+   "id": "Vue",
+    "course1": "VueJS 2 - The Complete Guide",
+    "course2": "Vue Official Documentation",
+    "course3": "VueJS FreeCodeCamp Tutorial",
+    "course4": "Build Web Apps with VueJS 2 & Firebase",
+    "course5": "VueJS Tutorial on Scrimba"
+
+    "id": "vue",
+    "course1": "VueJS 2 - The Complete Guide (Udemy)",
+    "course2": "VueJS 2.0 Mastering Web Apps",
+    "course3": "VueJS Official Documentation" <-- Original Code
+
+
+    / Solution 1 for GifLoad Function - Grabbed image via querySelector, add source using link togif online, append class of show
+    // let loaderDiv = document.querySelector('.imgLoader');
+    // loaderDiv.src = ' https://www.criminalwatchdog.com/images/assets/loading.gif'+ "?a="+Math.random();
+    // loaderDiv.className += ' show';
+
+     // Solution 2 - Grabbed parent div of img using querySelector, added class to show div, added src to img manually and hidden class 
+    // let loaderDiv = document.querySelector('.loader');
+    // loaderDiv.className += ' show';
+    // let imgLoader = document.querySelector('.imgLoader');
+    // imgLoader.src = ' https://www.criminalwatchdog.com/images/assets/loading.gif'+ "?a="+Math.random();    
+    // imgLoader.className += ' hidden'
+
+
+       // Solution 3  *Current* - Use template strings to create div and add classes
+    let output = document.querySelector('.mainClass');
+
+    let  gifDiv = `
+    <div class="loader">
+            <img src="loading.gif" alt="" class="imgLoader hidden">
+          </div>
+    `;
+
+    output.innerHTML += gifDiv;
+
+    // Settimeout to remove class after 3 seconds
+
+    setTimeout(function(){
+        givDiv.remove();
+    },3000)
+

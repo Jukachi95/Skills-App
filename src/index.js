@@ -6,10 +6,35 @@ const UserSearch = document.getElementById("userSearchBtn");
 // Event Listener
 UserSearch.addEventListener("click", runSearch);
 
+// Have a function that reloads the gif
+// Append the image src every time it is clicked
+
+function gifLoad(){
+
+    // Solution 3 - Use template strings to create div and add classes
+    let output = document.querySelector('.mainClass');
+
+    let  gifDiv = `
+    <div class="loader">
+            <img src="loading.gif" alt="" class="imgLoader hidden">
+          </div>
+    `;
+
+    output.innerHTML += gifDiv;
+
+    // Settimeout to remove class after 3 seconds
+
+    setTimeout(function(){
+        givDiv.remove();
+    },3000)
+
+}
+
 
 // Function that runs on search
 function runSearch(){
 
+    gifLoad();
     
 
 
@@ -29,8 +54,8 @@ function runSearch(){
                then(function(res){
                    return res.json();
                }).then(function(data){
-
-               loaderGif();
+ 
+              
 
                    let jsData = data[1];
 
@@ -162,9 +187,30 @@ function runSearch(){
 
             })
 
-           } else if(UserInput === "project management" || UserInput === "Project management"){
+           } else if(UserInput === "digital marketing" || UserInput === "Digital Marketing"){
               
-            fetch('stock.json')
+            fetch('stock.json').
+            then(res => res.json()).
+            then(dMarketing => {
+                let dmData = dMarketing[5];  
+                let output = '';
+
+                output+= `
+                
+                <h3> Top 5 Digital Marketing Courses</h3>
+
+                <ol>
+                <li>${dmData.course1}</li>
+                <li>${dmData.course2}</li>
+                <li>${dmData.course3}</li>
+                <li>${dmData.course4}</li>
+                <li>${dmData.course5}</li>
+                </ol>
+                `
+
+                document.querySelector("#render").innerHTML = output;
+            
+            })
 
 
            } else if(UserInput.length < 2 && UserInput != "c"){
@@ -247,11 +293,14 @@ function runSearch(){
 
            let render = document.querySelector('#render');
 
-               render.appendChild(gifImg);
-           
+               render.innerHTML = gifImg;
+       //    Was initially render.appendChild(gifImg)
+        //    setTimeout(function(){
+        //     render.innerHTML = gifImg;
+        //    }, 3000)
 
         }
-
+// Set timeout as a function in the initial js load with loadergif as a parameter
 
 // Things to add
 // // Add a loading animation
