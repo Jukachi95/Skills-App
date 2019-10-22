@@ -63,8 +63,8 @@ function runSearch(){
                   let output = '';
 
                   output+= `
+                  <h4 class = "mb-4 text-center">Top 10 JavaScript Courses</h4>
                   <ol>
-                   <h4 class = "mb-4">Top 10 JavaScript Courses</h4>
                         <li>${jsData.course1}</li>
                         <li>${jsData.course2}</li>
                         <li>${jsData.course3}</li>
@@ -95,7 +95,7 @@ function runSearch(){
                       let output = '';
 
                         output+= `
-                        <h4 class = "mb-4"> Top 10 Python Resources</h4> 
+                        <h4 class = "mb-4 text-center"> Top 10 Python Resources</h4> 
                         <ol>
                         <li>${pyResources.course1}</li>
                         <li>${pyResources.course2}</li>
@@ -131,7 +131,7 @@ function runSearch(){
                     let output = '';
 
                     output+=`
-                    <h4 class = "mb-4"> Top 8 React Courses</h4>
+                    <h4 class = "mb-4 text-center"> Top 8 React Courses</h4>
                     <ol>
                     <li>${rData.course1}</li>
                     <li>${rData.course2}</li>
@@ -157,13 +157,13 @@ function runSearch(){
                 let output = '';
 
                     output+=`
-                    <h4 class="mb-4">Top 5 Vue Courses</h4>
+                    <h4 class="mb-4 text-center">Top 5 Vue Courses</h4>
 
                     <ol>
                     <li>${vue.course1}</li>
                     <li>${vue.course2}</li>
                     <li>${vue.course3}</li>
-                    <li>${vue.course3}</li>
+                    <li>${vue.course4}</li>
                     <li>${vue.course5}</li>
                     </ol>
                     `;
@@ -183,7 +183,7 @@ function runSearch(){
 
                 output+= `
                 
-                <h3> Top 5 Digital Marketing Courses</h3>
+                <h3 class= "text-center"> Top 5 Digital Marketing Courses</h3>
 
                 <ol>
                 <li>${dmData.course1}</li>
@@ -208,7 +208,7 @@ function runSearch(){
                     let output = '';
 
                     output+= `
-                    <h1> Top Game Development Resources </h1>
+                    <h1 text-center> Top Game Development Resources </h1>
                     <ol>
                     <li>${gmdData.course1}</li>
                     <li>${gmdData.course2}</li>
@@ -220,9 +220,26 @@ function runSearch(){
 
                     document.querySelector('#render').innerHTML = output
                 }
-             )
+             )  
+            
+            }  else if(UserInput === "computer science"){
+                
+                fetch('stock.json').
+                then(res => res.json()).
+                then(csData => {
 
-        }  else if(UserInput.length < 2 && UserInput != "c"){
+                    let csDataCourse = csData[7];
+
+                    let output = '';
+
+                    output+= `
+                    <h4 class = "mb-4 text-center"> Top Rated Computer Science Courses</h4>
+                    `
+                    document.querySelector('#render').innerHTML = output;
+                })
+
+
+            } else if(UserInput.length < 2 && UserInput != "c"){
             lowTextLength();
         }
 

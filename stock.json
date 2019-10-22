@@ -2,7 +2,7 @@
 
 {
     "id": "Vue",
-    "course1": "VueJS 2 - The Complete Guide",
+    "course1": "VueJS 2 - The Complete Guide [Udemy]",
     "course2": "Vue Official Documentation",
     "course3": "VueJS FreeCodeCamp Tutorial",
     "course4": "Build Web Apps with VueJS 2 & Firebase",
@@ -87,12 +87,19 @@
 
 
 {
-    "id": "NodeJS"
-
+    "id": "NodeJS",
+     "course1": "The Complete Node JS developer Course [Udemy]", 
+     "course2": "NodeJS Advanced Concepts [Udemy]",
+     "course3": "Getting Started with NodeJS",    
+     "course4": "The Complete Node JS developer Course [Udemy]", 
+     "course5": "NodeJS Crash Course [YouTube]" 
 },
 
 {
-    "id": "Digital Marketing"
+    "id": "Digital Marketing",
+    "course1": "The Complete Digital Marketing Course - 12 Courses in 1",
+    "course2": "Google Analytics Academy", 
+    "course3": "Facebook Blueprint" 
 }
 
 
